@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewUser = ({newUser, setNewUser, logNewUser}) => {
+const Login = ({newUser, setNewUser, logNewUser}) => {
   return (
     <div className="card w-100 text-center border-white">
     <div className="row">
@@ -32,4 +32,4 @@ const NewUser = ({newUser, setNewUser, logNewUser}) => {
     )
 }
 
-export default NewUser
+export default Login
