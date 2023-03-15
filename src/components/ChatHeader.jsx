@@ -7,14 +7,14 @@ const ChatHeader = ({user, profile}) => {
               <div className="position-relative">
                 <img
                   src={profile}
-                  alt={user}
+                  alt={user?.username}
                   className="rounded-circle mx-2"
                   width="40"
                   height="40"
                 />
               </div>
               <div className="flex-grow-1">
-                <strong>{user}</strong>
+                <strong>{user?.username}</strong>
               </div>
               <div className="flex-grow-1">
                 <strong className="fs-3">Chatter Box</strong>

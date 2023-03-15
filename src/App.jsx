@@ -8,7 +8,7 @@ const socket = io('http://localhost:4000')
 function App() {
 
   return (
-<Main/>
+<Main socket={socket}/>
   );
 }
 
