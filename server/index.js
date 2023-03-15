@@ -43,6 +43,11 @@ io.on("connection", async (socket) => {
   socket.emit('users',users)
   //connected users details
 socket.emit('session', {userId: socket.userId, username: socket.username})
+//new user connection
+socket.broadcast.emit('user connected',{
+  userId: socket.userId,
+  username: socket.username
+})
 });
 
 const port = process.env.PORT || 4000;

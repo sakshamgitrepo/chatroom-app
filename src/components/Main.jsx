@@ -26,7 +26,11 @@ const Main = ({socket}) => {
      socket.on('session',({userId, username})=>{
       setUser({userId,username})
      })
-    }, [socket])
+     socket.on('user connected',({userId, username})=>{
+      const newMessage = {type:'userStatus', userId, username};
+      setMessages([...messages, newMessage])
+    })
+    }, [socket, messages])
     
   
     const logNewUser = () => {
